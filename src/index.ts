@@ -19,7 +19,7 @@ const historySearch = tool({
       .boolean()
       .optional()
       .describe(
-        "Set to true to list ALL sessions grouped by folder with per-folder counts, newest-first. Ignores query, filePath, mode, regex, fuzzy, and role. Respects searchAllProjects, date, and limit. Use when the user wants an overview of their sessions, e.g. 'list my sessions' or 'show all my conversations by folder'.",
+        "Set to true to list sessions grouped by folder with per-folder counts, newest-first. Ignores query, filePath, mode, regex, fuzzy, and role. Respects searchAllProjects, date, and limit (default: 50). Counts reflect the returned (possibly limited) sessions.",
       ),
     filePath: tool.schema
       .string()
